@@ -105,4 +105,7 @@ public:
 
 int main() {
 	binarytree obj;
+	while (true) {
+
+	}
 }
