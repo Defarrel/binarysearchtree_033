@@ -33,5 +33,16 @@ public:
 		node* parent = NULL;
 		node* currentNode = NULL;
 		search(element, parent, currentNode); // Locate the node which will be the parent of the node to be inserted
+
+		if (parent == NULL) { //if the parent is NULL (Tress is empty)
+			root = newNode; //Mark the new node as ROOT
+			return;
+		}
+		if (element < parent->info) { // If the vqalue in the data field of the new node is less than that of the parent 
+			parent->leftchild = newNode; // Make the left child of the parent point to the new node
+		}
+		else if (element > parent->info) { // If the value in the data field of the new node is greater than that of the parent
+			parent->rightchild = newNode;
+		}
 	}
 };
